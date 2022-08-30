@@ -10,8 +10,12 @@ function normalTime() {
         hrs = date.getHours();
         min = date.getMinutes();
         sec = date.getSeconds();
+        console.log(hrs,min,sec);
         if (hrs > 12) {
             hrs = `${hrs - 12} PM`;
+        }
+        if(hrs==12){
+            hrs = `${hrs} PM`;
         }
         else {
             hrs = `${hrs} AM`

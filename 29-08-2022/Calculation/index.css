@@ -1,0 +1,11 @@
+td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px 0px;
+}
+button{
+    width: auto;
+}
+.input{
+    border: none;
+}

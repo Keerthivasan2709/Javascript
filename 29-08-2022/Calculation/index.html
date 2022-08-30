@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+         <table>
+            <tbody>
+                <tr>
+                    <td class="input" colspan="3"><input id="inputBox" type="text" value="0"/></td>
+                </tr>
+                <tr>
+                    <td><button onclick="onClickNumber(1)">1</button></td>
+                    <td><button onclick="onClickNumber(2)">2</button></td>
+                    <td><button onclick="onClickNumber(3)">3</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="onClickNumber(4)">4</button></td>
+                    <td><button onclick="onClickNumber(5)">5</button></td>
+                    <td><button onclick="onClickNumber(6)">6</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="onClickNumber(7)">7</button></td>
+                    <td><button onclick="onClickNumber(8)">8</button></td>
+                    <td><button onclick="onClickNumber(9)">9</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="onClickNumber(`*`)">*</button></td>
+                    <td><button onclick="onClickNumber(`/`)">/</button></td>
+                    <td><button onclick="handleSubmit()">=</button></td>
+                </tr>
+                <tr>
+                   <td colspan="3"><button onclick="clearAll()">Clear</button></td>
+                </tr>
+            </tbody>
+         </table>
+         <script src="./index.js"></script>
+    </body>
+</html>

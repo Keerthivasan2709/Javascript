@@ -1,23 +1,24 @@
-let railway,normal;
+let railway, normal;
+let weeks=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 function normalTime() {
     clearInterval(railway)
 
-    var date = new Date()
-    var day = findDay(date.getDay())
-    var hrs, min, sec;
+    let date = new Date()
+    let day = weeks[date.getDay()];
+    let hrs, min, sec;
     normal = setInterval(() => {
-        var date = new Date()
+        let date = new Date()
         hrs = date.getHours();
         min = date.getMinutes();
         sec = date.getSeconds();
-        console.log(hrs,min,sec);
+        console.log(hrs, min, sec);
         if (hrs > 12) {
             hrs = `${hrs - 12} PM`;
         }
-        if(hrs==12){
+        else if (hrs == 12) {
             hrs = `${hrs} PM`;
         }
-        else {
+        else if (hrs < 12) {
             hrs = `${hrs} AM`
         }
         document.getElementById('time').innerText = `${day} || ${hrs}:${min}:${sec} `;
@@ -27,43 +28,14 @@ function normalTime() {
 
 function railWayTime() {
     clearInterval(normal)
-    var date = new Date()
-    var day = findDay(date.getDay())
-    var hrs, min, sec;
+    let date = new Date()
+    let day = weeks[date.getDay()]
+    let hrs, min, sec;
     railway = setInterval(() => {
-        var date = new Date()
+        let date = new Date()
         hrs = date.getHours();
         min = date.getMinutes();
         sec = date.getSeconds();
         document.getElementById('time').innerText = `${day} || ${hrs}:${min}:${sec} `;
-
     }, 1000)
-}
-
-function findDay(day) {
-    switch (day) {
-        case 0:
-            return 'Sunday';
-            break;
-        case 1:
-            return 'Monday';
-            break;
-        case 2:
-            return 'Tuesday';
-            break;
-        case 3:
-            return 'Wednesday';
-            break;
-        case 4:
-            return 'Thursday';
-            break;
-        case 5:
-            return 'Friday';
-            break;
-        case 6:
-            return 'Sunday';
-            break;
-        case 7:
-            return undefined;
-    }
 }

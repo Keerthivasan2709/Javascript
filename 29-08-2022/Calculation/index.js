@@ -7,8 +7,8 @@ function onClickNumber(a) {
 function handleSubmit() {
     try {
         var a = eval(calculation)
-        inputBox.value = a;
-        calculation = a
+        inputBox.value = a.toString();
+        calculation = a.toString()
     }
     catch (err) {
         alert("Enter the number properly")

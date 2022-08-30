@@ -14,7 +14,6 @@ function handleSubmit() {
         christmas = new Date(+arr[0], 11, 25);
     }
     heading.style.display="block"
-    console.log(dateTime,christmas);
     let oneDay = 24 * 60 * 60 * 1000
     days.innerText=Math.ceil(christmas - dateTime) / oneDay
 }
